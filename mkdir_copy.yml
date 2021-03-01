@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: ansible create directory example
+    file:
+      path: /home/ansible_directory
+      state: directory
+  - name: Copy file
+    copy:
+      src: /home/git/1.txt
+      dest: /home/1.txt
+      force: yes
+      become: yes
